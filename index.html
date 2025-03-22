@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ebenezer Gasonoo - WDD 230 - Web Frontend Development</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="/styles/larger.css" media="screen and (min-width: 768px)">
+    <meta name="description" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development">
+    <meta name="author" content="Ebenezer Gasonoo 230 - Web Frontend Development">
 </head>
 <body>
     <header>
-        <img>
-        <span></span>
+        <img src="images/profile.jpg" alt="Ebenezer Gasonoo" width="75" height="87">
+        <span>Ebenezer Gasonoo</span>
     </header>
     <nav>
         <ul>
@@ -18,7 +23,26 @@
             <li><a href="#">Form</a></li>
         </ul>
     </nav>
-    <main><h1></h1></main>
-    <footer></footer>
+    <main><h1>WDD 230: Web Frontend Development</h1>
+          <section class="card">
+            <h2>Learning Activities</h2>
+            <ul>
+                <li><a href="#">Activity 1</a></li>
+                <li><a href="#">Activity 2</a></li>
+                <li><a href="#">Activity 3</a></li>
+            </ul>
+          </section>
+
+          <section class="card">
+            <h2>Information</h2>
+            <p>Weather: <span id="weather">Loading...</span></p>
+            <p>Number of visits: <span id="visits">0</span></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Ebenezer Gasonoo, Ghana 🇬🇭</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
