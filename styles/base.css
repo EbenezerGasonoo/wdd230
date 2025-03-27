@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     color: #333;
 }
 
-
 header {
     text-align: center;
     padding: 20px;
@@ -15,11 +13,34 @@ header {
     color: white;
 }
 
+/* Navigation Menu */
+nav {
+    text-align: center;
+    background: #2c3e50;
+    padding: 10px;
+}
 
+#menu-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block; /* Show only in mobile view */
+    margin: 10px auto;
+}
+
+/* Hide menu in mobile view */
 .nav-menu {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.nav-menu.show {
+    display: flex; /* Show when toggled */
 }
 
 .nav-menu li {
@@ -36,18 +57,34 @@ header {
     border-radius: 5px;
 }
 
+/* Larger Screen (Show menu normally) */
+@media screen and (min-width: 768px) {
+    #menu-toggle {
+        display: none; /* Hide button */
+    }
+    
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
 
+    .nav-menu li {
+        margin: 0;
+    }
+}
+
+/* Main Content */
 main {
     max-width: 900px;
     margin: 20px auto;
 }
 
-
 .grid-container {
     display: grid;
     gap: 20px;
 }
-
 
 .card {
     background: white;
@@ -56,7 +93,7 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Learning Activities List */
 .activities-list {
     list-style-type: none;
     padding: 0;
@@ -66,7 +103,7 @@ main {
     margin-bottom: 10px;
 }
 
-
+/* Footer */
 footer {
     text-align: center;
     margin-top: 30px;
