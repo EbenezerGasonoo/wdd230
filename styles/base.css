@@ -57,24 +57,6 @@ nav {
     border-radius: 5px;
 }
 
-/* Larger Screen (Show menu normally) */
-@media screen and (min-width: 768px) {
-    #menu-toggle {
-        display: none; /* Hide button */
-    }
-    
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .nav-menu li {
-        margin: 0;
-    }
-}
-
 /* Main Content */
 main {
     max-width: 900px;
