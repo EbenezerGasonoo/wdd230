@@ -1,0 +1,80 @@
+/* ===============================
+   Custom CSS Normalization
+   =============================== */
+
+/* Remove all margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Normalize typography */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Normalize links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Normalize heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Normalize buttons */
+button {
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+/* Consistent form elements */
+input, textarea, select {
+    font: inherit;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+}
+
+/* Table normalization */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
