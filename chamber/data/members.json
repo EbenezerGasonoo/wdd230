@@ -1,0 +1,66 @@
+[
+    {
+      "name": "TechGhana Innovations",
+      "address": "123 Silicon Avenue, Accra, Ghana",
+      "phone": "+233 24 123 4567",
+      "website": "https://techghana.com",
+      "image": "techghana.png",
+      "membershipLevel": "Gold",
+      "industry": "Technology"
+    },
+    {
+      "name": "GreenFarm Ltd",
+      "address": "456 Cocoa Road, Kumasi, Ghana",
+      "phone": "+233 20 987 6543",
+      "website": "https://greenfarmgh.com",
+      "image": "greenfarm.png",
+      "membershipLevel": "Silver",
+      "industry": "Agriculture"
+    },
+    {
+      "name": "HealthFirst Clinic",
+      "address": "789 Wellness St, Tamale, Ghana",
+      "phone": "+233 27 333 1122",
+      "website": "https://healthfirstgh.org",
+      "image": "healthfirst.png",
+      "membershipLevel": "Gold",
+      "industry": "Healthcare"
+    },
+    {
+      "name": "Savanna Logistics",
+      "address": "32 Transport Yard, Bolgatanga, Ghana",
+      "phone": "+233 55 667 8901",
+      "website": "https://savlogistics.com",
+      "image": "savanna.png",
+      "membershipLevel": "Bronze",
+      "industry": "Logistics"
+    },
+    {
+      "name": "Kwame IT Solutions",
+      "address": "99 Tech Park, Cape Coast, Ghana",
+      "phone": "+233 50 765 4321",
+      "website": "https://kwameitsolutions.com",
+      "image": "kwameit.png",
+      "membershipLevel": "Silver",
+      "industry": "Software Development"
+    },
+    {
+      "name": "Royal Palm Hotel",
+      "address": "Palm Beach Road, Takoradi, Ghana",
+      "phone": "+233 30 123 7777",
+      "website": "https://royalpalmhotel.com",
+      "image": "royalpalm.png",
+      "membershipLevel": "Gold",
+      "industry": "Hospitality"
+    },
+    {
+      "name": "EcoWear Africa",
+      "address": "12 Fashion Lane, Accra, Ghana",
+      "phone": "+233 26 543 2100",
+      "website": "https://ecowearafrica.com",
+      "image": "ecowear.png",
+      "membershipLevel": "Bronze",
+      "industry": "Textiles"
+    }
+  ]
+  
