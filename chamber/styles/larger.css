@@ -1,24 +1,35 @@
-@media (min-width: 768px) {
-
-    /* Navigation Menu (Horizontal) */
-    .nav-menu {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+@media screen and (min-width: 768px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+        "hero hero"
+        "cta cta"
+        "events weather"
+        "spotlights spotlights";
     }
-
-    .nav-menu li {
-        margin: 0;
+  
+    #hero {
+      grid-area: hero;
     }
-
-    .nav-menu a {
-        padding: 10px 20px;
+  
+    #cta {
+      grid-area: cta;
     }
-
-    /* Grid Layout (Side-by-side Cards) */
-    .grid-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr; /* Learning Activities is twice as wide */
-        gap: 20px;
+  
+    #events {
+      grid-area: events;
     }
-}
+  
+    #weather {
+      grid-area: weather;
+    }
+  
+    #spotlights {
+      grid-area: spotlights;
+    }
+  
+    section {
+      padding: 2rem;
+    }
+  }
+  
