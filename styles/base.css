@@ -210,4 +210,16 @@ main.dark-mode .hero .label {
     background-color: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
+
+  .map {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .map h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #004b87;
+  }
   
