@@ -54,3 +54,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+// 🔹 Update copyright year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// 🔹 Show last modified date
+const lastMod = document.lastModified;
+document.getElementById("lastModified").textContent = `Last Modified: ${lastMod}`;
+
+// 🔹 Track number of visits
+let visits = Number(localStorage.getItem("visits-ls")) || 0;
+visits++;
+localStorage.setItem("visits-ls", visits);
+document.getElementById("visits").textContent = visits;
+
+// 🔹 Weather Info using OpenWeatherMap API
+const weatherEl = document.getElementById('weather');
+
+// Tema, Ghana coordinates
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=5.6693&lon=0.0166&units=metric&appid=9142d463ff084a27542f5d996e2a6835';
+
+async function getWeatherData() {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw Error(await response.text());
+    const data = await response.json();
+    displayResults(data);
+  } catch (error) {
+    console.error('Weather fetch error:', error);
+    weatherEl.textContent = 'Weather data unavailable.';
+  }
+}
+
+function displayResults(data) {
+  const temp = data.main.temp.toFixed(1);
+  const desc = data.weather[0].description;
+  const icon = data.weather[0].icon;
+  const iconSrc = `https://openweathermap.org/img/w/${icon}.png`;
+
+  weatherEl.innerHTML = `
+    <img src="${iconSrc}" alt="${desc}" loading="lazy">
+    <span>${temp}&deg;C - ${desc}</span>
+  `;
+}
+
+getWeatherData();
