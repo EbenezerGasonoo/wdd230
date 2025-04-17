@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebenezer Gasonoo - WDD 230 - Web Frontend Development</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
-    <link rel="icon" href="favicon.ico">
-    <meta name="description" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development">
-    <meta name="author" content="Ebenezer Gasonoo 230 - Web Frontend Development">
-    <meta property="og:title" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ebenezergasonoo.github.io/images/ghana-hometown.jpg">
-    <meta property="og:url" content="https://ebenezergasonoo.github.io/">
-    <meta property="og:description" content="Explore my web development journey through WDD 230 - Web Frontend Development.">
-    <meta property="og:locale" content="en_US">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebenezer Gasonoo - WDD 230 - Web Frontend Development</title>
 
+  <!-- Fonts and Normalize -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)" />
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)" />
+
+  <!-- Meta Info -->
+  <link rel="icon" href="favicon.ico" />
+  <meta name="description" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development" />
+  <meta name="author" content="Ebenezer Gasonoo" />
+  <meta property="og:title" content="Ebenezer Gasonoo - WDD 230 - Web Frontend Development" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ebenezergasonoo.github.io/images/ghana-hometown.jpg" />
+  <meta property="og:url" content="https://ebenezergasonoo.github.io/" />
+  <meta property="og:description" content="Explore my web development journey through WDD 230 - Web Frontend Development." />
+  <meta property="og:locale" content="en_US" />
 </head>
-<body>
-    <header>
-        <img src="images/profile.jpg" alt="Ebenezer Gasonoo" width="75" height="87">
-        <span>Ebenezer Gasonoo</span>
-        <button id="dark-mode-toggle">🌙 Dark Mode</button>
-    </header>
-    <nav>
-        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Site Plan</a></li>
-            <li><a href="#">Form</a></li>
-        </ul>
-    </nav>
-    <main><h1>WDD 230: Web Frontend Development</h1>
-          <section class="card">
-            <h2>Learning Activities</h2>
-            <ul>
-                <li><a href="#">Activity 1</a></li>
-                <li><a href="#">Activity 2</a></li>
-                <li><a href="#">Activity 3</a></li>
-            </ul>
-          </section>
 
-          <section class="card">
-            <h2>Information</h2>
-            <p>Weather: <span id="weather">Loading...</span></p>
-            <p>Number of visits: <span id="visits">0</span></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; <span id="year"></span> Ebenezer Gasonoo, Ghana 🇬🇭</p>
-        <p id="lastModified"></p>
-    </footer>
-    <script src="scripts/getDates.js"></script>
+<body>
+  <header>
+    <img src="images/profile.jpg" alt="Ebenezer Gasonoo" width="75" height="87" />
+    <span>Ebenezer Gasonoo</span>
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <nav>
+    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-menu">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Site Plan</a></li>
+      <li><a href="#">Form</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>WDD 230: Web Frontend Development</h1>
+    <div class="card-grid">
+      <section class="card">
+        <h2>Learning Activities</h2>
+        <ul>
+          <li><a href="#">Activity 1</a></li>
+          <li><a href="#">Activity 2</a></li>
+          <li><a href="#">Activity 3</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Information</h2>
+        <p>Weather: <span id="weather">Loading...</span></p>
+        <p>Number of visits: <span id="visits">0</span></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Ebenezer Gasonoo, Ghana 🇬🇭</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/getDates.js"></script>
 </body>
 </html>

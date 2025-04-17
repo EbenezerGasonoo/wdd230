@@ -39,3 +39,10 @@
         margin: 0;
     }
 }
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
