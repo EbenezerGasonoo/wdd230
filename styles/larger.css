@@ -18,7 +18,7 @@
     /* Grid Layout (Side-by-side Cards) */
     .grid-container {
         display: grid;
-        grid-template-columns: 2fr 1fr; /* Learning Activities is twice as wide */
+        grid-template-columns: 2fr 1fr; 
         gap: 20px;
     }
 }
