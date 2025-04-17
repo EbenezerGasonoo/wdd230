@@ -1,69 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema Chamber of Commerce Directory</title>
-    <meta name="description" content="Official website of the Tema Chamber of Commerce Directory. Join us in fostering economic growth and business networking in our community.">
-    <meta name="author" content="Tema Chamber of Commerce">
-    <meta name="keywords" content="Chamber of Commerce, Tema, Business Networking, Community Events, Local Businesses">
-    
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="favicon.ico">
-    
-    <meta property="og:title" content="Tema Chamber of Commerce">
-    <meta property="og:image" content="https://ebenezergasonoo.github.io/images/ghana-hometown.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ebenezergasonoo.github.io/tema-chamber/">
+  <!-- Standard Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Tema Chamber of Commerce. Join us to grow your business, attend community events, and connect with local leaders.">
+  <meta name="author" content="Tema Chamber of Commerce">
+  <meta name="keywords" content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
+
+  <!-- Title -->
+  <title>Tema Chamber of Commerce</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Normalize CSS -->
+<link rel="stylesheet" href="styles/normalize.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Tema Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-image.jpg">
+  <meta property="og:url" content="https://temachamber.com/">
 </head>
 <body>
-    <header>
-        <h1>Tema Chamber of Commerce</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Directory</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="hero">
-            <img src="images/tema-hero.jpg" alt="Tema Chamber of Commerce">
-        </section>
-        
-        <section id="cta">
-            <h2>Join the Tema Chamber of Commerce</h2>
-            <p>Become a member today and help support local businesses and community development in Tema.</p>
-            <a href="#">Join Now</a>
-        </section>
-        
-        <section id="events">
-            <h2>Upcoming Events</h2>
-            <p>Stay updated with the latest business networking and civic engagement events in Tema.</p>
-        </section>
-        
-        <section id="weather">
-            <h2>Current Weather</h2>
-            <p>Placeholder for real-time weather updates in Tema.</p>
-        </section>
-        
-        <section id="spotlights">
-            <h2>Business Spotlights</h2>
-            <p>Highlighting outstanding local businesses and entrepreneurs in Tema.</p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Contact: info@temachamber.com | Community House, Industrial Area, Tema</p>
-        <p>&copy; <span id="year"></span> Tema Chamber of Commerce</p>
-        <p>Developed by Ebenezer Gasonoo | WDD 230 Project</p>
-        <p>Last updated: <span id="lastModified"></span></p>
-    </footer>
+  <!-- Header -->
+  <header>
+    <h1>Tema Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Image -->
+    <section id="hero">
+      <img src="images/hero-image.jpg" alt="Tema Chamber of Commerce Community" />
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta">
+      <h2>Join the Chamber of Commerce</h2>
+      <p>Support local business. Elevate your network. Be part of Tema’s business growth.</p>
+      <a href="join.html">Join Now</a>
+    </section>
+
+    <!-- Current Events -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>📅 Business Networking Breakfast – April 30, 2025</li>
+        <li>🎤 SME Growth Workshop – May 7, 2025</li>
+        <li>🛍️ Tema Expo 2025 – May 21-23, 2025</li>
+      </ul>
+    </section>
+
+    <!-- Weather Card -->
+    <section id="weather">
+      <h2>Current Weather</h2>
+      <div class="weather-card">
+        <p>🌤️ 30°C - Partly Cloudy</p>
+        <p>Tema, Ghana</p>
+      </div>
+    </section>
+
+    <!-- Business Spotlights -->
+    <section id="spotlights">
+      <h2>Business Spotlights</h2>
+      <div class="spotlight-grid">
+        <div class="spotlight">
+          <h3>RoyalTech Ghana</h3>
+          <p>Leaders in digital transformation and IT consulting.</p>
+        </div>
+        <div class="spotlight">
+          <h3>Tema Foods</h3>
+          <p>Bringing healthy and organic products to your table.</p>
+        </div>
+        <div class="spotlight">
+          <h3>Atlantic Haulage</h3>
+          <p>Reliable shipping and logistics partners for businesses in Ghana and West Africa.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>📍 Community House, Industrial Area, Tema</p>
+    <p>📧 Email: info@temachamber.com</p>
+    <p>&copy; <span id="year"></span> Tema Chamber of Commerce</p>
+    <p>Developed by Ebenezer Gasonoo | WDD 230</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>
