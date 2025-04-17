@@ -46,3 +46,17 @@
     gap: 1rem;
 }
 
+/* Discover page grid layout for larger screens */
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+  }
+  
+  /* Hover effect on images (desktop only) */
+  .gallery img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+  }
+  
