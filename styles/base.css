@@ -139,7 +139,6 @@ footer {
     display: inline-block;
 }
 
-/* JS-enhanced nav toggle visibility */
 .nav-menu.show {
     display: flex;
 }
