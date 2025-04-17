@@ -98,3 +98,25 @@ function displayResults(data) {
 }
 
 getWeatherData();
+
+// Display range value
+const range = document.getElementById("rating");
+const ratingValue = document.getElementById("ratingValue");
+range.addEventListener("input", () => {
+  ratingValue.textContent = range.value;
+});
+
+// Password match validation
+const form = document.getElementById("accountForm");
+form.addEventListener("submit", function (e) {
+  const password = document.getElementById("password");
+  const confirm = document.getElementById("confirmPassword");
+
+  if (password.value !== confirm.value) {
+    alert("Passwords do not match. Please try again.");
+    password.value = "";
+    confirm.value = "";
+    password.focus();
+    e.preventDefault();
+  }
+});
