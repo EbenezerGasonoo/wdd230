@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Navigation toggle (hamburger menu)
+  // === NAVIGATION MENU TOGGLE ===
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-menu');
 
@@ -11,20 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Set timestamp if element exists
+  // === TIMESTAMP FOR FORMS ===
   const timestampField = document.getElementById("timestamp");
   if (timestampField) {
     const now = new Date();
     timestampField.value = now.toLocaleString();
   }
 
-  // Set lastModified in footer if element exists
+  // === LAST MODIFIED FOOTER DATE ===
   const lastModSpan = document.getElementById("lastModified");
   if (lastModSpan) {
     lastModSpan.textContent = document.lastModified;
   }
 
-  // Member directory logic
+  // === MEMBER DIRECTORY (GRID/LIST VIEW) ===
   const membersContainer = document.querySelector('#members');
   const gridBtn = document.getElementById('grid-btn');
   const listBtn = document.getElementById('list-btn');
@@ -67,40 +67,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getMembers();
   }
-});
 
-// Weather API logic
-const currentTemp = document.querySelector('#weather-temp');
-const weatherDesc = document.querySelector('#weather-desc');
-const forecast = document.querySelector('#forecast');
+  // === WEATHER API (CURRENT + 3-DAY FORECAST) ===
+  const currentTemp = document.querySelector('#weather-temp');
+  const weatherDesc = document.querySelector('#weather-desc');
+  const forecast = document.querySelector('#forecast');
 
-if (currentTemp && weatherDesc && forecast) {
-  const apiKey = '3f05813278c93c4afa09969dad0f6fdb';
-  const lat = 5.669;
-  const lon = -0.017;
+  if (currentTemp && weatherDesc && forecast) {
+    const apiKey = '3f05813278c93c4afa09969dad0f6fdb';
+    const lat = 5.669;
+    const lon = -0.017;
 
-  async function getWeather() {
-    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    async function getWeather() {
+      const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+      const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
-    const [weatherRes, forecastRes] = await Promise.all([
-      fetch(weatherURL),
-      fetch(forecastURL)
-    ]);
+      const [weatherRes, forecastRes] = await Promise.all([
+        fetch(weatherURL),
+        fetch(forecastURL)
+      ]);
 
-    const weatherData = await weatherRes.json();
-    const forecastData = await forecastRes.json();
+      const weatherData = await weatherRes.json();
+      const forecastData = await forecastRes.json();
 
-    currentTemp.innerHTML = `${weatherData.main.temp.toFixed(1)}°C`;
-    weatherDesc.textContent = weatherData.weather[0].description;
+      currentTemp.innerHTML = `${weatherData.main.temp.toFixed(1)}°C`;
+      weatherDesc.textContent = weatherData.weather[0].description;
 
-    const daily = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));
-    forecast.innerHTML = daily.slice(0, 3).map(item => {
-      const day = new Date(item.dt_txt).toLocaleDateString('en-US', { weekday: 'short' });
-      return `<div><strong>${day}:</strong> ${item.main.temp.toFixed(1)}°C</div>`;
-    }).join('');
+      const daily = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));
+      forecast.innerHTML = daily.slice(0, 3).map(item => {
+        const day = new Date(item.dt_txt).toLocaleDateString('en-US', { weekday: 'short' });
+        return `<div><strong>${day}:</strong> ${item.main.temp.toFixed(1)}°C</div>`;
+      }).join('');
+    }
+
+    getWeather();
   }
 
-  getWeather();
-}
+  // === SPOTLIGHT ADS FOR GOLD/SILVER MEMBERS ===
+  const spotlightContainer = document.querySelector('.spotlight-grid');
 
+  if (spotlightContainer) {
+    fetch('data/members.json')
+      .then(res => res.json())
+      .then(data => {
+        const eligible = data.members.filter(m =>
+          m.membership === 'Gold' || m.membership === 'Silver'
+        );
+
+        const shuffled = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+        spotlightContainer.innerHTML = shuffled.map(member => `
+          <div class="spotlight">
+            <img src="images/${member.image}" alt="${member.name} logo" loading="lazy" onerror="this.src='images/default-logo.png';">
+            <h3>${member.name}</h3>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+          </div>
+        `).join('');
+      })
+      .catch(err => console.error('Spotlight load error:', err));
+  }
+
+  // === MEET & GREET BANNER (MON–WED ONLY) ===
+  const day = new Date().getDay(); // Sunday = 0
+
+  if (day >= 1 && day <= 3) {
+    const banner = document.createElement('div');
+    banner.id = 'meet-banner';
+    banner.innerHTML = `
+      <p>📣 Chamber Meet & Greet – Wednesday @ 7:00 PM</p>
+      <button id="close-banner">❌</button>
+    `;
+    document.body.prepend(banner);
+
+    document.getElementById('close-banner').addEventListener('click', () => {
+      banner.remove();
+    });
+  }
+});
