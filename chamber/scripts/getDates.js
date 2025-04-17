@@ -68,3 +68,39 @@ document.addEventListener('DOMContentLoaded', () => {
     getMembers();
   }
 });
+
+// Weather API logic
+const currentTemp = document.querySelector('#weather-temp');
+const weatherDesc = document.querySelector('#weather-desc');
+const forecast = document.querySelector('#forecast');
+
+if (currentTemp && weatherDesc && forecast) {
+  const apiKey = '9142d463ff084a27542f5d996e2a6835';
+  const lat = 5.669;
+  const lon = -0.017;
+
+  async function getWeather() {
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    const [weatherRes, forecastRes] = await Promise.all([
+      fetch(weatherURL),
+      fetch(forecastURL)
+    ]);
+
+    const weatherData = await weatherRes.json();
+    const forecastData = await forecastRes.json();
+
+    currentTemp.innerHTML = `${weatherData.main.temp.toFixed(1)}°C`;
+    weatherDesc.textContent = weatherData.weather[0].description;
+
+    const daily = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));
+    forecast.innerHTML = daily.slice(0, 3).map(item => {
+      const day = new Date(item.dt_txt).toLocaleDateString('en-US', { weekday: 'short' });
+      return `<div><strong>${day}:</strong> ${item.main.temp.toFixed(1)}°C</div>`;
+    }).join('');
+  }
+
+  getWeather();
+}
+

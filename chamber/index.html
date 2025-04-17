@@ -36,18 +36,16 @@
 
   <main>
     <section id="hero">
-      <img src="images/hero-image.jpg" alt="Tema Chamber of Commerce Community" />
+      <img src="images/hero-image.jpg" alt="Tema Chamber of Commerce Community" loading="lazy" />
     </section>
 
     <section id="info">
       <div class="info-box">
-        <h2>Community Information</h2>
-        <p>Engaging programs, community stats, and initiatives in Tema.</p>
-      </div>
-      <div class="info-box">
         <h2>Weather</h2>
-        <p>🌤️ 30°C - Partly Cloudy</p>
+        <p><span id="weather-temp"></span> - <span id="weather-desc"></span></p>
+        <div id="forecast"></div>
       </div>
+      
     </section>
 
     <section id="cta">
@@ -59,20 +57,10 @@
     <section id="spotlights">
       <h2>Business Spotlights</h2>
       <div class="spotlight-grid">
-        <div class="spotlight">
-          <h3>RoyalTech Ghana</h3>
-          <p>Leaders in digital transformation and IT consulting.</p>
-        </div>
-        <div class="spotlight">
-          <h3>Tema Foods</h3>
-          <p>Bringing healthy and organic products to your table.</p>
-        </div>
-        <div class="spotlight">
-          <h3>Atlantic Haulage</h3>
-          <p>Reliable shipping and logistics partners for businesses in Ghana and West Africa.</p>
-        </div>
+        <!-- Dynamic spotlight content will be inserted here by JS -->
       </div>
     </section>
+    
   </main>
 
   <footer>
@@ -83,6 +71,6 @@
     <p>Last Updated: <span id="lastModified"></span></p>
   </footer>
 
-  <script src="scripts/getDates.js"></script>
+  <script src="scripts/getDates.js"  defer></script>
 </body>
 </html>

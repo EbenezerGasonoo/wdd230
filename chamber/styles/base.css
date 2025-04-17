@@ -385,6 +385,80 @@ main.dark-mode .hero .label {
   color: #fff;
 }
 
+/* ====== MEET & GREET BANNER ====== */
+/* Displays on Monday–Wednesday with close button */
+#meet-banner {
+  background-color: #ffd700;
+  color: #000;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 1000;
+}
+
+#meet-banner button#close-banner {
+  position: absolute;
+  right: 1rem;
+  top: 0.75rem;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #000;
+}
+
+/* ====== WEATHER FORECAST STYLING ====== */
+/* For the dynamic 3-day weather forecast displayed under the current weather */
+#forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #004b87;
+}
+
+@media screen and (min-width: 600px) {
+  #forecast {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+/* ====== SPOTLIGHT SECTION IMPROVEMENTS ====== */
+/* Styling spotlight content dynamically loaded from members.json */
+.spotlight h3 {
+  color: #004b87;
+  margin-bottom: 0.5rem;
+}
+
+.spotlight p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+@media screen and (min-width: 768px) {
+  .spotlight-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .spotlight {
+    flex: 1;
+    margin: 0 0.5rem;
+  }
+}
+/* ====== ACCESSIBILITY ENHANCEMENT ====== */
+/* Highlights focusable elements when tabbed for better accessibility */
+:focus-visible {
+  outline: 2px dashed #004b87;
+  outline-offset: 3px;
+}
+
+
 /* ====== FOOTER ====== */
 footer {
   background-color: #004b87;
