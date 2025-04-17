@@ -81,7 +81,7 @@ nav ul li a:hover {
 
 .card-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -110,8 +110,8 @@ main picture img {
 
 .hero {
   position: relative;
-  max-width: 960px;
-  margin: 0 auto 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .hero picture img {
