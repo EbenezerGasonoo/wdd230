@@ -1,12 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("lastModified").textContent = document.lastModified;
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+// Add this to your getDates.js OR in a new JS file
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
 
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
-
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
   });
 });
