@@ -1,11 +1,13 @@
-// Navigation toggle (hamburger menu)
-document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
+document.addEventListener('DOMContentLoaded', () => {
+  // Navigation toggle (hamburger menu)
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-menu');
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('open');
     });
   }
 
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const timestampField = document.getElementById("timestamp");
   if (timestampField) {
     const now = new Date();
-    timestampField.value = now.toLocaleString(); // "4/17/2025, 7:30:15 PM"
+    timestampField.value = now.toLocaleString();
   }
 
   // Set lastModified in footer if element exists
@@ -22,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     lastModSpan.textContent = document.lastModified;
   }
 
-  // Only run member directory logic if on the directory page
+  // Member directory logic
   const membersContainer = document.querySelector('#members');
   const gridBtn = document.getElementById('grid-btn');
   const listBtn = document.getElementById('list-btn');
@@ -35,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function displayMembers(members) {
-      membersContainer.innerHTML = ''; // Clear before appending
+      membersContainer.innerHTML = '';
       members.forEach(member => {
         const card = document.createElement('div');
         card.classList.add('member-card');

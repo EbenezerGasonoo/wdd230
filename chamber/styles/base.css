@@ -112,6 +112,10 @@ main {
   flex-direction: column;
 }
 
+#nav-menu ul {
+  display: none;
+}
+
 
 /* ====== HERO SECTION ====== */
 #hero img,
