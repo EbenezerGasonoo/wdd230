@@ -8,6 +8,9 @@
   <meta name="keywords" content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
   <title>Tema Chamber of Commerce</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
@@ -19,7 +22,7 @@
 </head>
 <body>
   <header>
-    <h1>Tema Chamber of Commerce</h1>
+    <h1>Tema Chamber of Commerce Discover Page</h1>
     <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
     <nav id="nav-menu">
       <ul>
@@ -33,62 +36,35 @@
 
   <main class="discover-layout">
     <aside class="sidebar">
-      <h2>Community Statistics</h2>
-      <ul>
-        <li>Population: 250,000+</li>
-        <li>Average Temperature: 28°C</li>
-        <li>Top Industry: Shipping</li>
-        <li>City Founded: 1960</li>
-      </ul>
-
-      <h2>Attractions</h2>
-      <ul>
-        <li>Tema Harbour</li>
-        <li>Sakumono Beach</li>
-        <li>Greenwich Meridian Line</li>
-        <li>Community 1 Market</li>
-      </ul>
-
-      <h2>Upcoming Events</h2>
-      <ul>
-        <li>Business Expo – June 15</li>
-        <li>Clean-Up Campaign – July 7</li>
-        <li>Chamber Luncheon – July 21</li>
-      </ul>
-
-      <h2>Visitor Message</h2>
-      <div id="visit-message" class="visit-box"></div>
+      <section>
+        <h2>Community Insights</h2>
+        <p>Population: 250,000+</p>
+        <p>Avg Temp: 28°C</p>
+        <p>Top Industry: Shipping</p>
+      </section>
+  
+      <section>
+        <h2>Event Spotlight</h2>
+        <img src="images/local1.webp" alt="Mini Highlight" loading="lazy" width="100%">
+        <p>Don't miss the Chamber Expo!</p>
+      </section>
+  
+      <section>
+        <h2>Calendar</h2>
+        <p>📅 June 24, 2024</p>
+        <!-- You could embed or simulate a calendar widget here -->
+      </section>
+  
+      <section>
+        <h2>Visitor Message</h2>
+        <div id="visit-message" class="visit-box"></div>
+      </section>
     </aside>
-
+  
     <section class="photo-gallery">
-      <figure>
-        <img src="images/local1.webp" alt="Harbor View" loading="lazy">
-        <figcaption>Harbor View</figcaption>
-      </figure>
-      <figure>
-        <img src="images/local2.webp" alt="Local Market" loading="lazy">
-        <figcaption>Local Market</figcaption>
-      </figure>
-      <figure>
-        <img src="images/local3.webp" alt="Community Center" loading="lazy">
-        <figcaption>Community Center</figcaption>
-      </figure>
-      <figure>
-        <img src="images/local4.webp" alt="Street Festival" loading="lazy">
-        <figcaption>Street Festival</figcaption>
-      </figure>
-      <figure>
-        <img src="images/local5.webp" alt="Beachfront" loading="lazy">
-        <figcaption>Beachfront</figcaption>
-      </figure>
-      <figure>
-        <img src="images/local6.webp" alt="Sunset Over Tema" loading="lazy">
-        <figcaption>Sunset Over Tema</figcaption>
-      </figure>
+      <!-- Keep your 6 lazy-loaded images with figcaption -->
     </section>
   </main>
-  
-
   <footer>
     <p>📍 Community House, Industrial Area, Tema</p>
     <p>📧 Email: info@temachamber.com | ☎️ +233 30 123 4567</p>

@@ -113,72 +113,105 @@ main picture img {
     height: auto;
   }
 
-
-  /* Discover Page Styles */
-.discover-layout {
+  /* === Discover Page Sidebar Grid Layout === */
+  .discover-layout {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Mobile default: stack vertically */
     gap: 2rem;
-  }
-  
-  .sidebar {
-    background-color: #f2f2f2;
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  
-  .sidebar h2 {
-    color: #004b87;
-    margin: 1.5rem 0 1rem;
-    font-size: 1.25rem;
-  }
-  
-  .sidebar h2:first-child {
-    margin-top: 0;
-  }
-  
-  .sidebar ul {
-    margin-bottom: 1.5rem;
-  }
-  
-  .sidebar li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .visit-box {
-    background-color: #fff;
+    max-width: 1200px;
+    margin: 2rem auto;
     padding: 1rem;
-    border-radius: 6px;
-    border: 1px solid #ddd;
-    font-style: italic;
   }
   
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #004b87;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.visit-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Gallery Area */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.photo-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-gallery figcaption {
+  background-color: #f2f2f2;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Hover effect for larger screens */
+@media (hover: hover) and (min-width: 768px) {
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Layout grid for wider screens */
+@media (min-width: 768px) {
+  .discover-layout {
+    grid-template-columns: 1fr 3fr;
+  }
+
   .photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .photo-gallery figure {
-    margin: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 1024px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .photo-gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .photo-gallery figcaption {
-    text-align: center;
-    padding: 0.5rem;
-    background-color: #f2f2f2;
-    font-weight: 500;
-  }
+}
+
+
+/* === Hero Section === */
 
   .hero {
     position: relative;
@@ -309,3 +342,13 @@ main.dark-mode .hero .label {
     border: 0;
   }
   
+  /* Apply hover effects only on larger screens */
+@media (hover: hover) and (min-width: 768px) {
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+}
+
