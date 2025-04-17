@@ -16,6 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById("dark-mode-toggle");
     const main = document.querySelector("main");
 
+    // visits.js
+
+    // Get the element where visits will be displayed
+    const visitsDisplay = document.getElementById("visits");
+
+    // Get the stored number of visits from localStorage
+    let numVisits = Number(localStorage.getItem("numVisits")) || 0;
+
+    // Increment the visit count
+    numVisits++;
+
+    // Save the updated count back to localStorage
+    localStorage.setItem("numVisits", numVisits);
+
+    // Display the number of visits
+    if (visitsDisplay) {
+    visitsDisplay.textContent = numVisits;
+    }
+
+
     // Load saved preference
     if (localStorage.getItem("darkMode") === "enabled") {
         main.classList.add("dark-mode");
