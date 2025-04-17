@@ -75,7 +75,7 @@ const weatherDesc = document.querySelector('#weather-desc');
 const forecast = document.querySelector('#forecast');
 
 if (currentTemp && weatherDesc && forecast) {
-  const apiKey = '9142d463ff084a27542f5d996e2a6835';
+  const apiKey = '3f05813278c93c4afa09969dad0f6fdb';
   const lat = 5.669;
   const lon = -0.017;
 
