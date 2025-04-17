@@ -106,6 +106,12 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 }
+/* SHOW nav menu when open class is toggled */
+.nav-menu.open ul {
+  display: flex !important;
+  flex-direction: column;
+}
+
 
 /* ====== HERO SECTION ====== */
 #hero img,
@@ -481,4 +487,3 @@ form input[type="submit"]:hover {
     align-items: flex-start;
   }
 }
-

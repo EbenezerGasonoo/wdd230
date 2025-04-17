@@ -65,3 +65,35 @@
     margin: 0;
   }
 }
+#members.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#members.list-view {
+  display: block;
+  padding: 1rem;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.list-view .member-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+}
+
+.member-card img {
+  width: 80px;
+  height: auto;
+  border-radius: 6px;
+}

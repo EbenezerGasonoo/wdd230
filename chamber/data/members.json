@@ -1,66 +1,60 @@
-[
+{
+  "members": [
     {
-      "name": "TechGhana Innovations",
-      "address": "123 Silicon Avenue, Accra, Ghana",
+      "name": "Tropic Ventures Ltd.",
+      "address": "123 Palm Street, Tema",
       "phone": "+233 24 123 4567",
-      "website": "https://techghana.com",
-      "image": "techghana.png",
-      "membershipLevel": "Gold",
-      "industry": "Technology"
+      "website": "https://tropicventures.com",
+      "image": "tropic_ventures_ltd.png",
+      "membership": "Gold"
     },
     {
-      "name": "GreenFarm Ltd",
-      "address": "456 Cocoa Road, Kumasi, Ghana",
-      "phone": "+233 20 987 6543",
-      "website": "https://greenfarmgh.com",
-      "image": "greenfarm.png",
-      "membershipLevel": "Silver",
-      "industry": "Agriculture"
+      "name": "Tema Printing Press",
+      "address": "456 Ink Road, Tema",
+      "phone": "+233 20 765 4321",
+      "website": "https://temaprint.com",
+      "image": "tema_printing_press.png",
+      "membership": "Silver"
     },
     {
-      "name": "HealthFirst Clinic",
-      "address": "789 Wellness St, Tamale, Ghana",
-      "phone": "+233 27 333 1122",
-      "website": "https://healthfirstgh.org",
-      "image": "healthfirst.png",
-      "membershipLevel": "Gold",
-      "industry": "Healthcare"
+      "name": "Alpha Foods Ghana",
+      "address": "7 Mango Ave, Tema",
+      "phone": "+233 55 987 6543",
+      "website": "https://alphafoodsgh.com",
+      "image": "alpha_foods_ghana.png",
+      "membership": "Bronze"
     },
     {
-      "name": "Savanna Logistics",
-      "address": "32 Transport Yard, Bolgatanga, Ghana",
-      "phone": "+233 55 667 8901",
-      "website": "https://savlogistics.com",
-      "image": "savanna.png",
-      "membershipLevel": "Bronze",
-      "industry": "Logistics"
+      "name": "Evergreen Organic Market",
+      "address": "88 Greenfield Rd, Tema",
+      "phone": "+233 54 321 0987",
+      "website": "https://evergreenmarket.com",
+      "image": "evergreen_organic_market.png",
+      "membership": "Silver"
     },
     {
-      "name": "Kwame IT Solutions",
-      "address": "99 Tech Park, Cape Coast, Ghana",
-      "phone": "+233 50 765 4321",
-      "website": "https://kwameitsolutions.com",
-      "image": "kwameit.png",
-      "membershipLevel": "Silver",
-      "industry": "Software Development"
+      "name": "Coastal Tech Solutions",
+      "address": "12 Coastal Loop, Community 6, Tema",
+      "phone": "+233 26 456 7890",
+      "website": "https://coastaltechgh.com",
+      "image": "coastal_tech_solutions.png",
+      "membership": "Gold"
     },
     {
-      "name": "Royal Palm Hotel",
-      "address": "Palm Beach Road, Takoradi, Ghana",
-      "phone": "+233 30 123 7777",
-      "website": "https://royalpalmhotel.com",
-      "image": "royalpalm.png",
-      "membershipLevel": "Gold",
-      "industry": "Hospitality"
+      "name": "Tema Builders & Co.",
+      "address": "75 Brickstone Way, Tema Industrial Area",
+      "phone": "+233 30 998 1122",
+      "website": "https://temabuilders.com",
+      "image": "tema_builders_and_co.png",
+      "membership": "Gold"
     },
     {
-      "name": "EcoWear Africa",
-      "address": "12 Fashion Lane, Accra, Ghana",
-      "phone": "+233 26 543 2100",
-      "website": "https://ecowearafrica.com",
-      "image": "ecowear.png",
-      "membershipLevel": "Bronze",
-      "industry": "Textiles"
+      "name": "Royal Breeze Hotel",
+      "address": "Beachfront Blvd, Community 1, Tema",
+      "phone": "+233 50 111 2244",
+      "website": "https://royalbreezehotel.com",
+      "image": "royal_breeze_hotel.png",
+      "membership": "Bronze"
     }
   ]
-  
+}
