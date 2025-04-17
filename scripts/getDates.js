@@ -16,22 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Dark Mode
 document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const body = document.body;
+    const main = document.querySelector("main");
 
-    // Check for saved dark mode preference
+    // Apply saved dark mode preference to <main>
     if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
+        main.classList.add("dark-mode");
         darkModeToggle.textContent = "☀️ Light Mode";
     }
 
     darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
+        main.classList.toggle("dark-mode");
 
         // Save preference to localStorage
-        if (body.classList.contains("dark-mode")) {
+        if (main.classList.contains("dark-mode")) {
             localStorage.setItem("darkMode", "enabled");
             darkModeToggle.textContent = "☀️ Light Mode";
         } else {
