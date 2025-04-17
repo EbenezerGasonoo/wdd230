@@ -1,62 +1,37 @@
-@media (min-width: 768px) {
-
-    /* Navigation Menu (Horizontal) */
-    .nav-menu {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .nav-menu li {
-        margin: 0;
-    }
-
-    .nav-menu a {
-        padding: 10px 20px;
-    }
-
-    /* Grid Layout (Side-by-side Cards) */
-    .grid-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr; 
-        gap: 20px;
-    }
-}
-
 @media screen and (min-width: 768px) {
+
+    /* === Navigation Menu (Horizontal for Large Screens) === */
     #menu-toggle {
-        display: none; 
+      display: none;
     }
-    
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .nav-menu li {
-        margin: 0;
-    }
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-}
-
-/* Discover page grid layout for larger screens */
-main {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 2rem;
-  }
   
-  /* Hover effect on images (desktop only) */
-  .gallery img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-    border-radius: 8px;
+    .nav-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .nav-menu li {
+      margin: 0;
+    }
+  
+    .nav-menu a {
+      padding: 10px 20px;
+    }
+  
+    /* === Card Grid Layout (Responsive) === */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Equal width columns */
+      gap: 1.5rem;
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+        .hero picture img {
+          height: 400px;
+        }
+      }
+      
   }
   
