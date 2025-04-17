@@ -113,6 +113,73 @@ main picture img {
     height: auto;
   }
 
+
+  /* Discover Page Styles */
+.discover-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .sidebar {
+    background-color: #f2f2f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .sidebar h2 {
+    color: #004b87;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.25rem;
+  }
+  
+  .sidebar h2:first-child {
+    margin-top: 0;
+  }
+  
+  .sidebar ul {
+    margin-bottom: 1.5rem;
+  }
+  
+  .sidebar li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .visit-box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-style: italic;
+  }
+  
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .photo-gallery figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .photo-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo-gallery figcaption {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #f2f2f2;
+    font-weight: 500;
+  }
+
   .hero {
     position: relative;
     max-width: 960px;

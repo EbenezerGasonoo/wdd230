@@ -40,3 +40,23 @@ document.addEventListener("DOMContentLoaded", function () {
     numVisits++;
     localStorage.setItem("visit-count", numVisits);
 });
+
+    const visitMsg = document.getElementById("visit-message");
+    const lastVisit = localStorage.getItem("last-visit");
+    const now = Date.now();
+
+    if (!lastVisit) {
+    visitMsg.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+    const diffTime = now - Number(lastVisit);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays < 1) {
+        visitMsg.textContent = "Back so soon! Awesome!";
+    } else {
+        visitMsg.textContent = `You last visited ${diffDays} ${diffDays === 1 ? "day" : "days"} ago.`;
+    }
+    }
+
+    // Save current time as latest visit
+    localStorage.setItem("last-visit", now);
