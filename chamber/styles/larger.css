@@ -1,35 +1,53 @@
 @media screen and (min-width: 768px) {
-    main {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: 
-        "hero hero"
-        "cta cta"
-        "events weather"
-        "spotlights spotlights";
-    }
-  
-    #hero {
-      grid-area: hero;
-    }
-  
-    #cta {
-      grid-area: cta;
-    }
-  
-    #events {
-      grid-area: events;
-    }
-  
-    #weather {
-      grid-area: weather;
-    }
-  
-    #spotlights {
-      grid-area: spotlights;
-    }
-  
-    section {
-      padding: 2rem;
-    }
+  #menu-toggle {
+    display: none;
   }
-  
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #nav-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #nav-menu ul {
+    display: flex !important;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  #nav-menu ul li a {
+    background: none;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    border-bottom: 2px solid transparent;
+  }
+
+  #nav-menu ul li a:hover {
+    border-bottom: 2px solid #f2c94c;
+    color: #f2c94c;
+  }
+
+  #info {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .spotlight-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .spotlight {
+    flex: 1 1 30%;
+  }
+}

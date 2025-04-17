@@ -1,87 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Standard Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Welcome to the Tema Chamber of Commerce. Join us to grow your business, attend community events, and connect with local leaders.">
   <meta name="author" content="Tema Chamber of Commerce">
   <meta name="keywords" content="Tema Chamber, Business Networking, Ghana Business, Economic Development, Chamber of Commerce">
-
-  <!-- Title -->
   <title>Tema Chamber of Commerce</title>
-
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Normalize CSS -->
-<link rel="stylesheet" href="styles/normalize.css">
-
-  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
-
-  <!-- Social Media Meta -->
   <meta property="og:title" content="Tema Chamber of Commerce">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/hero-image.jpg">
   <meta property="og:url" content="https://temachamber.com/">
 </head>
 <body>
-  <!-- Header -->
   <header>
     <h1>Tema Chamber of Commerce</h1>
-    <nav>
+    <button id="menu-toggle" aria-label="Toggle Navigation">☰</button>
+    <nav id="nav-menu">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Events</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Discover</a></li>
         <li><a href="#">Directory</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <!-- Hero Image -->
     <section id="hero">
       <img src="images/hero-image.jpg" alt="Tema Chamber of Commerce Community" />
     </section>
 
-    <!-- Call to Action -->
+    <section id="info">
+      <div class="info-box">
+        <h2>Community Information</h2>
+        <p>Engaging programs, community stats, and initiatives in Tema.</p>
+      </div>
+      <div class="info-box">
+        <h2>Weather</h2>
+        <p>🌤️ 30°C - Partly Cloudy</p>
+      </div>
+    </section>
+
     <section id="cta">
       <h2>Join the Chamber of Commerce</h2>
       <p>Support local business. Elevate your network. Be part of Tema’s business growth.</p>
       <a href="join.html">Join Now</a>
     </section>
 
-    <!-- Current Events -->
-    <section id="events">
-      <h2>Upcoming Events</h2>
-      <ul>
-        <li>📅 Business Networking Breakfast – April 30, 2025</li>
-        <li>🎤 SME Growth Workshop – May 7, 2025</li>
-        <li>🛍️ Tema Expo 2025 – May 21-23, 2025</li>
-      </ul>
-    </section>
-
-    <!-- Weather Card -->
-    <section id="weather">
-      <h2>Current Weather</h2>
-      <div class="weather-card">
-        <p>🌤️ 30°C - Partly Cloudy</p>
-        <p>Tema, Ghana</p>
-      </div>
-    </section>
-
-    <!-- Business Spotlights -->
     <section id="spotlights">
       <h2>Business Spotlights</h2>
       <div class="spotlight-grid">
@@ -101,13 +74,11 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>📍 Community House, Industrial Area, Tema</p>
-    <p>📧 Email: info@temachamber.com</p>
-    <p>&copy; <span id="year"></span> Tema Chamber of Commerce</p>
-    <p>Developed by Ebenezer Gasonoo | WDD 230</p>
+    <p>&copy; <span id="year"></span> Tema Chamber of Commerce | Community House, Tema</p>
     <p>Last Updated: <span id="lastModified"></span></p>
   </footer>
+
+  <script src="scripts/getDates.js"></script>
 </body>
 </html>

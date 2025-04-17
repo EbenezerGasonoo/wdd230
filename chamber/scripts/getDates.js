@@ -1,5 +1,9 @@
-// Set the current year dynamically
 document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
 
-// Set the last modified date dynamically
-document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
