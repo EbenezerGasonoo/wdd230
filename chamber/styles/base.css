@@ -284,6 +284,11 @@ img.loaded {
   font-weight: bold;
 }
 
+#cta a:hover {
+  background-color: #006bb3;
+}
+
+
 /* ====== INFO + SPOTLIGHT SECTIONS ====== */
 #info {
   display: flex;
