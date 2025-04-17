@@ -1,43 +1,34 @@
-/* === Custom Normalize for Tema Chamber of Commerce === */
-
-/* Set box-sizing to border-box globally */
+/* Custom Minimal Normalize */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin & padding */
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure {
   margin: 0;
   padding: 0;
 }
 
-/* Set default font smoothing */
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Make sure main is treated as block */
 main {
   display: block;
 }
 
-/* Ensure lists don't have bullets or spacing by default */
-ul,
-ol {
+ul, ol {
   list-style: none;
   padding-left: 0;
 }
 
-/* Default link styling */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Button reset, but maintain appearance */
 button {
   background: none;
   border: none;
@@ -47,17 +38,12 @@ button {
   color: inherit;
 }
 
-/* Image responsiveness */
 img {
   max-width: 100%;
   display: block;
   height: auto;
 }
 
-/* Form elements inherit font */
-input,
-select,
-textarea,
-button {
+input, select, textarea, button {
   font: inherit;
 }
